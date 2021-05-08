@@ -22,5 +22,18 @@ namespace ClassLibrary1
             else Max = C;
             return Max;
         }
+
+        public double GetTotalItemPrice(int count)
+        {
+            double price = 10.99;
+            double total;
+            total = count * price;
+            if (total < 0)
+            {
+                throw new Exception("The total is less than zero");
+            }
+            return total;
+        }
+
     }
 }
